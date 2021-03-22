@@ -20,7 +20,19 @@ def test(fdc):
 def read(fdc):
     status = fdc.read()
     if (status == 0):
-        print(fdc.dskBuf)
+        print(fdc.dskBuf, end="")
+
+def write(fdc):
+    fdc.dskBuf = sys.stdin.read()
+    while len(fdc.dskBuf) < 512:
+        fdc.dskBuf += '\0';
+    fdc.write()
+
+def clear(fdc):
+    fdc.dskBuf = ""
+    while len(fdc.dskBuf) < 512:
+        fdc.dskBuf += '\0';
+    fdc.write()
 
 def main():
     parser = argparse.ArgumentParser()
@@ -55,6 +67,8 @@ def main():
             write(fdc)
         elif (args.command == "test"):
             test(fdc)
+        elif (args.command == "clear"):
+            clear(fdc)
     finally:
         fdc.done()
 
