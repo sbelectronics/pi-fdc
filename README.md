@@ -2,6 +2,12 @@
 ## -- Something nobody said, ever. (except smbaker)
 ## Scott Baker http://www.smbaker.com/
 
+## Links:
+
+* Blog Post: [https://www.smbaker.com/raspberry-pi-floppy-controller-board](https://www.smbaker.com/raspberry-pi-floppy-controller-board)
+* Youtube Video: [https://www.youtube.com/watch?v=I6E7oM7EDcc](https://www.youtube.com/watch?v=I6E7oM7EDcc)
+* smb-pi-lib library, containing the floppy driver: [https://github.com/sbelectronics/smb-pi-lib](https://github.com/sbelectronics/smb-pi-lib)
+
 ## Performance tuning
 
 See https://www.raspberrypi.org/forums/viewtopic.php?t=228727 for background.
